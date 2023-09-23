@@ -25,11 +25,13 @@ export type Translate = <T extends unknown = string>(
 export interface I18n {
   t: Translate
   lang: string
+  cProps?: any
 }
 
 export interface I18nProviderProps {
   lang?: string
   namespaces?: Record<string, I18nDictionary>
+  cProps?: Record<string, any>
   children?: ReactNode
   config?: I18nConfig
 }

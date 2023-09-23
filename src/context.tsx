@@ -10,6 +10,7 @@ if (typeof createContext === 'function') {
   context = createContext<I18n>({
     t: (k) => (Array.isArray(k) ? k[0] : k),
     lang: '',
+    cProps: {},
   })
 }
 

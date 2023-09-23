@@ -1,5 +1,5 @@
 {
-  "name": "next-translate",
+  "name": "@turingenterprises/next-translate",
   "version": "2.5.3",
   "description": "Tiny and powerful i18n tools (Next plugin + API) to translate your Next.js pages.",
   "license": "MIT",
@@ -40,6 +40,7 @@
     "Trans*",
     "withTranslation*",
     "useTranslation*",
+    "useCommonProps*",
     "setLanguage*",
     "index*",
     "AppDirI18nProvider*"
@@ -47,7 +48,7 @@
   "scripts": {
     "build": "yarn clean && cross-env NODE_ENV=production && yarn tsc",
     "clean": "yarn clean:build && yarn clean:examples",
-    "clean:build": "del lib appWith* Dynamic* I18n* index context loadNa* setLang* Trans* useT* withT* getP* getC* *.d.ts getT transC* wrapT* types formatElements AppDirI18nProvider*",
+    "clean:build": "del lib appWith* Dynamic* I18n* index context loadNa* setLang* Trans* useT* useCommonProps* withT* getP* getC* *.d.ts getT transC* wrapT* types formatElements AppDirI18nProvider*",
     "clean:examples": "del examples/**/.next examples/**/node_modules examples/**/yarn.lock",
     "example": "yarn example:complex",
     "example:basic": "yarn build && yarn --cwd examples/basic && yarn --cwd examples/basic dev",

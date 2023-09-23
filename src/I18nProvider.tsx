@@ -10,6 +10,7 @@ export const InternalContext = createContext({ ns: {}, config: {} })
 export default function I18nProvider({
   lang: lng,
   namespaces = {},
+  cProps = {},
   children,
   config: newConfig = {},
 }: I18nProviderProps) {
@@ -29,7 +30,7 @@ export default function I18nProvider({
   const t = transCore({ config, allNamespaces, pluralRules, lang })
 
   return (
-    <I18nContext.Provider value={{ lang, t }}>
+    <I18nContext.Provider value={{ lang, t, cProps }}>
       <InternalContext.Provider value={{ ns: allNamespaces, config }}>
         {children}
       </InternalContext.Provider>

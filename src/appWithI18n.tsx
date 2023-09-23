@@ -40,6 +40,7 @@ export default function appWithI18n(
       <I18nProvider
         lang={props.pageProps?.__lang || props.__lang || defaultLocale}
         namespaces={props.pageProps?.__namespaces || props.__namespaces}
+        cProps={props.pageProps?.__cProps}
         config={config}
       >
         <AppToTranslate {...props} />
